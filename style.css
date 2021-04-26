@@ -1,0 +1,165 @@
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@500&display=swap');
+
+*,
+*::before,
+*::after{
+  box-sizing: border-box;
+}
+
+body{
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  width: 100%;
+  margin: 0;
+ /*NOTE: initially w/o margin, image was too wide where there was a scroller. Adding margin:0 fit the image into page*/
+  font-family: 'Comfortaa', serif;
+  background: linear-gradient(5deg, lightCyan, white, lightCyan);
+}
+  
+body::before{
+  content:'';
+  position: fixed;
+  background-image: url("https://www.bareinternational.com/wp-content/uploads/2018/04/AdobeStock_196313960-1030x407.jpeg");
+  top: 0px;
+  left: 0px;
+  bottom: 0px;
+  right: 0px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  opacity: 0.5;
+  z-index: -1;
+}
+/* PROBLEM:
+    background image wasnt showing up at all 
+   SOLUTION:
+    appeared after putting top, left, bottom, AND right: 0*/
+
+/*PROBLEM:
+  bg img is showing but it's OVER the content-- i.e. fonts, boxes, etc are also pink (note: changed background images )
+  SOLUTION: 
+  use Z-INDEX*/
+
+  /* PROBLEM:
+    background image isnt covering to the very end/edges
+   SOLUTION:
+    changed position from ABSOLUTE to FIXED*/
+  
+ #main {
+  
+  border-radius: 15px;
+  box-shadow: -3px -2px 5px grey;
+  min-width: 500px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+#survey-form{
+  display: inline-block;
+  padding: 25px;
+  color: white;
+  max-width: 650px;
+  background: linear-gradient(135deg, rgba(56, 130, 208, 0.79), rgba(56, 205, 208, 0.89),  rgba(56, 205, 208, 0.69));
+  border-radius: 5px;
+  }
+/*updated 4/13:
+deleted background-color from #main and added to #survey-form. Also changed from using #(color) to rgba to use its transparency (look at form for reference)*/
+
+h1 {
+  font-weight: 800;
+  line-height: 35px;
+  }
+ 
+  
+header {
+  text-align: center;
+  padding: 5px;
+  margin: 5px;
+  }
+
+span{
+  font-size: 14px;
+}
+  
+/*.question{
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  /*align-items: center;
+  use to center*/
+  
+
+.q-header{
+  font-size: 20px;
+  padding: 5px;
+  margin-bottom: 5x;
+  line-height: 20px;
+}
+
+.textbox, select, textarea, button{
+  width: 100%;
+/*setting this to 100% made input box go close to the edge*/
+  padding: 10px; 
+  border-radius: 5px;
+  margin-top: 5px;
+  margin-bottom: 10px;
+  font-size: 15px;
+  font-family: inherit;
+  /*text-align: center;
+    use to center */
+}
+/*removed input from list-look at HTML .radiocontainer problem comment for reference*/ 
+
+input:focus{
+  border: 3px solid #555; 
+}
+
+select:focus{
+  border: 3px solid #555; 
+}
+
+textarea:focus{
+  border: 3px solid #555; 
+}
+
+.align{
+  display: flex;
+  flex-direction: row;
+}
+
+#other-choice{
+  width: 70%;
+  margin-left: 20px;
+}
+
+textarea{
+  min-height: 100px;
+  font-family: inherit;
+}
+
+.choice{
+  padding: 10px;
+  margin-top: 5px;
+  margin-bottom: 5px; 
+}
+
+ .submit-button{
+    display: block
+    align-content: center;
+  }
+button{
+  font-family: inherit;
+  font-size: 18px;
+  padding: 10px;
+  width: 100%;
+  cursor: pointer;
+  border-radius: 2px;
+}
+
+button:hover{
+  background: lightCyan;
+  color: #2c95c9;
+}
+  

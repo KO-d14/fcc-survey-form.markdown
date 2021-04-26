@@ -1,0 +1,121 @@
+<script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
+
+<header>
+  <h1 id="title"> Your Opinion Matters!</h1>
+  <p id="description">Please help us improve our platform by filling out our survey.</p>
+</header>
+
+<div id="main">
+  <form id="survey-form" action="">
+    <div class="question">
+      <label id="name-label" class="q-header" for="name"> Name </label>
+      <br>
+      <input class="textbox" id="name" type="text" name="name" placeholder="John Smith" required>
+    </div>
+    <br>
+    <div class="question">
+      <label id="email-label" class="q-header" for="email">Email </label>
+      <br>
+      <input class="textbox" id="email" type="email" name="email" placeholder="john.smith@email.com" required>
+      <!--PROBLEM: I was getting 15/17 - needed to pass step#6
+    SOLUTION: instead of type="text", put type="email" -->
+    </div>
+    <br>
+    <div class="question">
+      <label id="number-label" for="number" class="q-header">Age <span class="parenthesis">(Optional)</span></label>
+      <br>
+      <input class="textbox" id="number" type="number" min="10" max="100" placeholder="Age" required>
+      <!--New thing I learned: using type="number"-->
+    </div>
+    <br>
+    <div class="question">
+      <label id="dropdown-label" for="dropdown" class="q-header"> Which option below best describes your current role?</label>
+      <br>
+      <select name="dropdown" id="dropdown">
+        <option disabled selected value>Select Current Role</option>
+        <option value="student"> Student</option>
+        <option value="ftj">Full-time Job</option>
+        <option value="ptj">Part-time Job</option>
+        <option value="pns">Prefer not to say</option>
+        <option value="other">Other</option>
+      </select>
+      <!-- New Learned: <select>, don't use input for dropdowns. 
+     Also make sure to put end tag AFTER <option> -->
+      <!-- New Learned: in the FIRST OPTION LINE - writing "disabled selected value" will null the choice whilst stil showing in the list-->
+
+      <!-- PROBLEM:
+      Dropdown is not showing with my values, neither is the placeholder-->
+      <!-- SOLUTION: 
+      I had to write it BETWEEN 
+         <option value=""> _____ </option>  -->
+      <!-- SOLUTION (for placeholder):
+      Instead of using placeholder, use the "DISABLED SELECTED VALUE" -->
+    </div>
+    <br>
+    <div class=" radio-container">
+      <label id="radio-label" class="q-header" for="radio">Are you interested in pursuing a career in computer science? </label>
+      <br>
+      <div class="checkbox-container">
+        <input id="definitely" type="radio" name="radio" value="definitely">
+        <label class="choice" for="definitely"> Definitely</label>
+      <br>
+        <input id="maybe" type="radio" name="radio" value="maybe">
+        <label class="choice" for="maybe"> Maybe</label>
+      <br>
+        <input id="not-sure" type="radio" name="radio" value="not-sure">
+        <label class="choice" for="not-sure"> Not sure</label>
+      </div>
+    </div>
+    <!-- NOTE TO SELF: 
+      make sure to add name="" in <input>
+        This groups the choices together so that user can only chooose one from the choices -->
+
+    <!-- PROBLEM:
+      Values are not showing
+         SOLUTION: 
+     have <input> and <label> together to make a radio button choice   -->
+
+    <!-- PROBLEM: was getting 16/17- step #13
+     SOLUTION: didn't put VALUE to ALL <input>-->
+
+<!-- PROBLEM:
+      RADIO BUTTON & CHECKBOX are in center, while choices are on the left side
+
+     TRIES: 
+      putting <div class="align"> <input></input><label></label> </div> to each choices --- RESULT: choices are on right while radio buttons are still in middle but in different sizes (look at forum for pictures) 
+
+     SOLUTION:
+  EXCLUDE the radio button & checkbox from having width:100%. Initially, I set input in CSS which put width attritibute to ALL. (look at forum for more info). SUMMARY: DON'T PUT WIDTH:100% on RADIO BUTTONS-->
+    
+<br>
+<div class="question">
+  <label  id="checkbox-label" class="q-header" for="checkbox"> How are you learning coding? <span class="parenthesis">(Check all that apply)</span> </label>
+  <div class="checkbox">
+    <input id="self-learn" type="checkbox" name="checkbox" value="self-learn">
+    <label class="choice" for="self-learn"> Self-learning</label>
+    <br>
+    <input id="college" type="checkbox" value="college">
+    <label class="choice" for="college">College</label>
+    <br>
+    <input id="bootcamp" type="checkbox" value="bootcamp">
+    <label class="choice" for="checkbox"> Bootcamp</label>
+    <br>
+    <input id="other" type="checkbox" value="other">
+    <label class="choice" for="other">Other</label>
+    <input id="other-choice" type="text">
+  </div>
+</div>
+<br>
+<div class="question">
+  <label id="comment-label" class="q-header" for="comment">Any comments or suggestions? </label>
+  <br>
+  <textarea id="comment" name="comment" cols="30" rows="10" placeholder="Enter your comments here..."></textarea>
+  <!-- New Learned: <textarea>
+                   Don't use <input>  -->
+</div>
+<br>
+<div class="submit-button">
+  <button id="submit">Submit</button>
+</div>
+</form>
+</div>
