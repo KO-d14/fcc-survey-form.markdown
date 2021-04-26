@@ -1,18 +1,18 @@
 # fcc-survey-form.markdown
 
-<h1> Name:</h1> <br>
+<h4> Name:</h4> <br>
  FCC- Survey Form 
  
-Description: <br>
+<h4>Description: </h4> <br>
  A project given by the FCC curriculum to meet the requirements given to create a survey form. 
  
-Additional Info: <br>
+<h4>Additional Info:</h4> <br>
  Link to the CodePen would be down below: <br>
  https://codepen.io/ko-d14/pen/NWdrjwW
  
-Acknowledgment: <br>
-  Thank you to those who answered my questions and given me feedbacks on the FCC forum. 
+<h4> Acknowledgment: </h4> <br>
+  Thank you to those who answered my questions and given me feedbacks on the <i>FCC forum. </i>
   
-Project Status: <br>
+<h4> Project Status: </h4><br>
   So far content with how the project looks, so it will be considered as "finished." <br>
   Just would like feedbacks on my work: if I'm not implementing proper coding practices, if there are better ways to code it, etc. :)
