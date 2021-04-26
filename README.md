@@ -3,16 +3,16 @@
 Name: <br>
  FCC- Survey Form 
  
-Description: 
+Description: <br>
  A project given by the FCC curriculum to meet the requirements given to create a survey form. 
  
-Additional Info:
- Link to the CodePen would be down below:
+Additional Info: <br>
+ Link to the CodePen would be down below: <br>
  https://codepen.io/ko-d14/pen/NWdrjwW
  
-Acknowledgment: 
+Acknowledgment: <br>
   Thank you to those who answered my questions and given me feedbacks on the FCC forum. 
   
-Project Status: 
-  So far content with how the project looks, so it will be considered as "finished." 
+Project Status: <br>
+  So far content with how the project looks, so it will be considered as "finished." <br>
   Just would like feedbacks on my work: if I'm not implementing proper coding practices, if there are better ways to code it, etc. :)
